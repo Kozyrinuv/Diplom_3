@@ -17,7 +17,7 @@ public class UserClient {
                 .body(json)
                 .when()
                 .post(LOGIN)
-                .then()//.log().all()
+                .then()
                 .assertThat()
                 .statusCode(HTTP_OK)
                 .and()

@@ -26,10 +26,10 @@ public class RegisterTest extends BaseTest {
         loginPage.inputEmail(email);
         loginPage.inputPassword(password);
         constructorPage = loginPage.pressSiginButton();
-        constructorPage.checkClickableMakeOrderButton();
         //Получаем token нового UI зарегистрированного пользователя для последующего удаления
         String json = "{" + "\"email\": \"" + email + "\"," + "\"password\": \"" + password + "\"}";
         loginTestUser(json);
+        constructorPage.checkClickableMakeOrderButton();
     }
 
     @Test
